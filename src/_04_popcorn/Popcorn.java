@@ -14,31 +14,31 @@ package _04_popcorn;
  */
 
 class Microwave {
-	private int cookTime;
-	Popcorn thingToBeCooked;
+	private static int cookTime;
+	static Popcorn thingToBeCooked;
 
 	Microwave() {
 		System.out.println("Microwave says: a Microwave has been made.");
 	}
 
-	void putInMicrowave(Popcorn thingToBeCooked) {
+	static void putInMicrowave(Popcorn thingToBeCooked) {
 		System.out.println("Microwave says: popcorn put in microwave.");
-		this.thingToBeCooked = thingToBeCooked;
+		Microwave.thingToBeCooked = thingToBeCooked;
 	}
 
-	void setTime(int cookTimeInMinutes) {
-		this.cookTime = cookTimeInMinutes;
-		System.out.println("Microwave says: cook time is set to " + cookTime + " minutes.");
+	static void setTime(int cookTimeInMinutes) {
+		cookTime = cookTimeInMinutes;
+		System.out.println("Microwave says: cook time is set to " + cookTime + " seconds.");
 	}
 
-	void startMicrowave() {
+	static void startMicrowave() {
 		if (thingToBeCooked == null) {
 			System.out.println("Microwave says: there's nothing in the microwave!");
 		} else {
 			for (int i = 0; i < cookTime * 10 + 1; i++) {
 				thingToBeCooked.applyHeat();
 			}
-			thingToBeCooked.eat();
+			//thingToBeCooked.eat();
 		}
 	}
 }
@@ -47,14 +47,14 @@ public class Popcorn {
 
 	private int kernels = 20;
 	private String flavor;
-	private boolean isCooked = false;
+	private static boolean isCooked = false;
 
 	Popcorn(String flavor) {
 		this.flavor = flavor;
 		System.out.println("Popcorn says: making package of " + this.flavor + " popcorn.");
 	}
 
-	public void eat() {
+	public static void eat() {
 		if (isCooked) {
 			System.out.println("Popcorn says: Time to eat popcorn!");
 		} else {

@@ -15,19 +15,19 @@ package _03_harry_potter;
 		*/
 
 public class HarryPotter {
-
-	private boolean cloakOn;
+Runner runner = new Runner();
+	private static boolean cloakOn;
 
 	HarryPotter() {
 		System.out.println("making Harry Potter...");
 	}
 
-	void castSpell(String spell) {
+	static void castSpell(String spell) {
 		System.out.println("casting spell: " + spell);
 	}
 
-	void makeInvisible(boolean invisible) {
-		this.cloakOn = invisible;
+	static void makeInvisible(boolean invisible) {
+		cloakOn = invisible;
 
 		if (cloakOn)
 			System.out.println("Harry is invisible");
@@ -35,7 +35,7 @@ public class HarryPotter {
 			System.out.println("Harry is visible");
 	}
 
-	void spyOnSnape() {
+	static void spyOnSnape() {
 		System.out.println("Harry sees Professor Snape doing nefarious things.");
 	}
 

@@ -16,28 +16,27 @@ package _02_cat;
 		
 		*/
 
-
 public class Cat {
-
-	private String name;
-	private int lives = 9;
+Runner r = new Runner();
+	private static String name;
+	private static int lives = 9;
 
 	Cat(String name) {
 		this.name = name;
 	}
 
-	void meow() {
+	static void meow() {
 		System.out.println("meeeeeooooooooooowwwwwwwww!!");
 	}
 
-	public void printName() {
+	public static void printName() {
 		if (name == null)
 			System.out.println("i don't know my own name!");
 		else
 			System.out.println("my name is " + name);
 	}
 
-	void kill() {
+	static void kill() {
 		lives--;
 		if (lives > 0)
 			System.out.println("nice try, but I still have " + lives + " lives left");
