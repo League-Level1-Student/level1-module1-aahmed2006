@@ -22,7 +22,7 @@ Runner r = new Runner();
 	private static int lives = 9;
 
 	Cat(String name) {
-		this.name = name;
+		Cat.name = name;
 	}
 
 	static void meow() {

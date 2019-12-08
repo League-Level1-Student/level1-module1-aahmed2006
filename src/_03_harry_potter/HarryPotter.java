@@ -15,7 +15,6 @@ package _03_harry_potter;
 		*/
 
 public class HarryPotter {
-Runner runner = new Runner();
 	private static boolean cloakOn;
 
 	HarryPotter() {

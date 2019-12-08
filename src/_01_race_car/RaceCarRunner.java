@@ -15,11 +15,10 @@ public class RaceCarRunner {
 		// 3. Crash the RaceCar
 		RaceCar.crash();
 		// 4. If the car is damaged. Bring it in for a pit stop.
-		RaceCar.isDamaged();
 		RaceCar.pit();
 		// 5. Help the car move into first place.
 		for(int i = 0; i < 7; i++) {
 			RaceCar.overtake();
 		}
-	}
+}
 }

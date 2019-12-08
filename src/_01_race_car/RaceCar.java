@@ -17,7 +17,7 @@ public class RaceCar {
 	 * @param positionInRace Position of race car in the race
 	 */
 	public RaceCar(String brand, int positionInRace) {
-		System.out.println("Your " + brand + " race car has been created.");
+		System.out.println("Your " + brand + "race car has been created.");
 		if (positionInRace <= 0)
 			throw new IllegalArgumentException("The car's position cannot be negative.");
 		else if (positionInRace > 15) 
