@@ -28,10 +28,10 @@ class Microwave {
 
 	static void setTime(int cookTimeInMinutes) {
 		cookTime = cookTimeInMinutes;
-		System.out.println("Microwave says: cook time is set to " + cookTime + " seconds.");
+		System.out.println("Microwave says: cook time is set to " + cookTime + " minutes.");
 	}
 
-	static void startMicrowave() {
+	static void start() {
 		if (thingToBeCooked == null) {
 			System.out.println("Microwave says: there's nothing in the microwave!");
 		} else {
