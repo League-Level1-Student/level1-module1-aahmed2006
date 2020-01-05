@@ -1,5 +1,7 @@
 package _07_binary_converter;
 
+
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -13,7 +15,7 @@ public static void main(String[] args) {
 	frame.setVisible(true);
 	JButton button = new JButton();
 	button.setText("covert");
-	button.addActionListener(null);
+	button.addMouseListener(null);
 	JTextField text = new JTextField(20);
 	JPanel panel= new JPanel();
 	JLabel label = new JLabel();
@@ -46,3 +48,4 @@ String convert(String input) {
 
                               
 }
+

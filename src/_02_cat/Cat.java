@@ -17,7 +17,6 @@ package _02_cat;
 		*/
 
 public class Cat {
-Runner r = new Runner();
 	private static String name;
 	private static int lives = 9;
 
@@ -30,10 +29,11 @@ Runner r = new Runner();
 	}
 
 	public static void printName() {
-		if (name == null)
+		if (name == null) {
 			System.out.println("i don't know my own name!");
-		else
+		} else {
 			System.out.println("my name is " + name);
+		}
 	}
 
 	static void kill() {
