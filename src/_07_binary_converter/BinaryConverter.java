@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class BinaryConverter {
-public static void main(String[] args) {
+BinaryConverter() {
 	JFrame frame = new JFrame();
 	frame.setVisible(true);
 	JButton button = new JButton();
