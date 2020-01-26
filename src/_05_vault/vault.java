@@ -1,10 +1,11 @@
 package _05_vault;
 
-public class vault {
- vault() {
+public class Vault {
+	Vault vault = new Vault();
 
- }
-	void tryCode(boolean code) {
-	
- }
+	public void tryCode(int code) {
+		//if(code= ) {
+			
+		
+	}
 }
