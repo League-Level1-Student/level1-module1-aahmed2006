@@ -2,6 +2,9 @@ package _07_binary_converter;
 
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -9,21 +12,22 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class BinaryConverter {
-BinaryConverter() {
+public class BinaryConverter implements ActionListener {
+
+public BinaryConverter() {
 	JFrame frame = new JFrame();
 	frame.setVisible(true);
 	JButton button = new JButton();
-	button.setText("covert");
-	button.addMouseListener(null);
 	JTextField text = new JTextField(20);
+	button.setText("covert");
+	//button.addMouseListener();
 	JPanel panel= new JPanel();
 	JLabel label = new JLabel();
 	label.add(text);
 	panel.add(text);
 	panel.add(button);
 	frame.add(panel);
-	frame.pack();	
+	frame.pack();
 	
 }
 String convert(String input) {
@@ -44,6 +48,14 @@ String convert(String input) {
         JOptionPane.showMessageDialog(null, "Enter a binary, silly!!!");
         return "-";
     }
+}
+
+                                       
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
 }
 
                               
