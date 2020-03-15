@@ -2,8 +2,8 @@ package _07_binary_converter;
 
 
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class BinaryConverter implements ActionListener {
+public class BinaryConverter {
 
 public BinaryConverter() {
 	JFrame frame = new JFrame();
@@ -20,7 +20,6 @@ public BinaryConverter() {
 	JButton button = new JButton();
 	JTextField text = new JTextField(20);
 	button.setText("covert");
-	//button.addMouseListener();
 	JPanel panel= new JPanel();
 	JLabel label = new JLabel();
 	label.add(text);
@@ -28,7 +27,10 @@ public BinaryConverter() {
 	panel.add(button);
 	frame.add(panel);
 	frame.pack();
-	
+	JTextField input = text;
+}
+public void mouseClicked(MouseEvent e) {
+	convert(text);
 }
 String convert(String input) {
     if(input.length() != 8){
@@ -50,14 +52,5 @@ String convert(String input) {
     }
 }
 
-                                       
-
-@Override
-public void actionPerformed(ActionEvent e) {
-	// TODO Auto-generated method stub
-	
-}
-
-                              
-}
+}                              
 
